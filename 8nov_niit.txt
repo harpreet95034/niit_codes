@@ -1,0 +1,114 @@
+Topic : java input and output programming 
+
+q] what is exception handling in java ?what are the different ways of handling exception in java ?
+how to implement them ?what happens when your program gets error ?
+Ans : 
+there are 3 types of error mostly occur
+:
+1. syntax error - error at compile time 
+2. runtime error - error at runtime 
+	1. exact memory for variables 
+	2. program need network connection to run but it is not available 
+	3.program need database but database connection could not be establish .
+3. logical error - 
+
+keywords for exceptio handlng :
+	1. try
+	2. catch
+	3. throws
+
+WAP accept customer details and idpay it ?without using scanner class .wlso use the concept of exception handling 
+ans:
+public static void main(String[] args)
+{
+	byte custid;
+	String custname;
+	int custage;
+	float custsal;
+	char grade ;
+try
+{
+
+	InputStreamReader 	is = new 	InputStreamReader	(System.in);
+BufferdReader br = new BufferedReader(is);
+
+	System.out.println("enter student id");
+custid= Byte.valueOf(br.readLine());
+
+System.out.println("enter customer name ");
+custname = br.readLine();
+
+System.out.println("customer age ");
+custage=Integer.parseInt(br.readLine());
+
+System.out.println("customer salary");
+custsal = Float.parseFloat(br.readLine());
+
+System.out.println("customer grade ");
+grade = (char)(br.read());
+
+System.out.println("id is :"+custid);
+System.out.println("name is :"+custname);
+System.out.println("age is :"+custage);
+System.out.println("salary is :"+custsalary);
+System.out.println("grade is :"+grade);
+}
+
+catch(IOException ex)
+{
+	
+}
+}
+
+q] what is the use of InputStreamReader and BufferedReader class ?
+
+in ava for every type of implementation we have the support of exception handling classes ..
+
+we have exception handling for :
+1. performing arithmetic operations 
+2. performing arrays
+3. if we use objects 
+4. if we use files , DB ,network,thread,collection,data types etc ..
+
+"Exception" is base class for all the exception classes in java like : 
+
+1. IOException
+2.ArrayIndexoutOfBounds Exception
+3.Arithmetic Exception
+4. FilenotFound Exception
+5. NullPointer Exception
+
+q] what are the different types of exception in java ?what is the difference between checked and unchecked exception ?
+
+even java supports userdefined exception ....which means as a programmer you can create your own exception class in java as per ur logic .
+
+q]what do we mean by userdefined exception in java and how to implement user defined exception in java with eg. 
+
+q] what is the use of try , catch , finally ,throw and throws in java 
+
+WAP reading data from file and writing to standard output .
+
+WAP reading data from standard input device and writing to file .
+
+WAP to accept the customer details from keyboard and write it to file .
+
+q] what are the different types of classes supporting 
+
+
+
+
+
+
+
+
+standard input device :
+	1. keyboard 
+	2.file (read)
+	3.DB(read)
+	4. memory location 
+standard output device 
+	1.monitor 
+	2.files(write)
+	3.DB (write)
+	4. memory location
+
