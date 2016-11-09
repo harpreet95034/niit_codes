@@ -1,0 +1,142 @@
+WAP to accept age from user , if age greater then 18 display message that users iseligible for voting but in other case program must throw exception regarding invalid age .
+
+
+//creating the structure of exception class 
+class InvalidAgeException extends Exception
+{
+	InvalidAgeException(String s) 
+	{	
+		super(s);		
+	}	
+}
+
+class userdefinedException
+{
+public void votingeligiblity(int age) throws InvalidAgeException
+{
+//Scanner sc = new Scanner(System.in)
+//int age = sc.nextInt();
+if(age <18 )
+{
+	throw new InvalidAgeException("not valid age ")
+}
+else 
+{
+	System.out.println("u are eligible ");
+}
+}
+
+public static void main(String[] args)
+{
+	try 
+	{
+voting elegibilty(13);
+	}
+catch(InvalidAgeException index)
+{
+System.out.println("Exception occured");
+}
+}
+
+
+various clases supporting file programming in java ?
+
+objects are divided into : 
+1.inputstream :
+	-file input stream
+	-object input stream 
+	-byte input stream 
+2.outputstream:
+	-file outputstream
+
+q] what is stream ?
+- objects - 1. file input stream :
+		a. data input stream 
+		b. buffered input stream 
+	2. file output stream : 
+		a. data output stream 
+		b. buffered output stream 
+
+for character string :( entire data is getting read and is converted )
+
+objects : 1.reader - a. file reader b. buffere reader 
+2. writer - a. file writer 
+	b. buffer writer 
+
+
+WAP for random access file demo .
+
+// start
+
+public class randomaccessfile
+{
+public static void main(String[] args)
+{
+String data = "this is my java program";
+
+writefromfile("samplefile.txt",23,data);
+System.out.println("data written to file ");
+
+String datafromfile = readfromfile("samplefile.txt",23);
+}
+
+public static String readfromfile(String f ,int position)
+{
+String record = null;
+
+try
+{
+RandomAccessFile filestore = new RandomAccessFile("fname","rw")
+
+filestore.seek(position);
+record = filestore.readUTF();
+
+filestore.close();
+}
+catch(IOException ex)
+{
+System.out.println(ex);
+}
+return record;
+}
+
+public static void writefromfile(String file ,int position,String record)
+{
+
+try
+{
+RandomAccessFile filestore = new RandomAccessFile("fname","rw")
+
+filestore.seek(position);
+filestore.writeUTF(record);
+
+}
+}
+}
+
+//stop
+
+q] what is constructor ? what are the different ways of implementing constructor in java ?
+
+q] what is the use of "super" ?
+
+q] what is the difference between final.finally and finalize in java ?
+
+q] how to implement base class constructor in child class ?
+
+q] waht is the use of throw and throws in java ?
+
+q] what is the use of random access class in java ?
+
+q] what is file class hierrachy ?
+imp points for big data :
+
+1. how to read and write text data 
+2. how to read and write binary data 
+3. how to read and write xml data 
+4. how to read and write JSON data 
+5. how to read the data from specific position of file 
+6. how to read the data by using specific delimeter of file 
+7. how to write data to specific position 
+8. how to write data at end of the file 
+9. how to read and write specific word or character from a given line .
