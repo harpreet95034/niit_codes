@@ -1,0 +1,61 @@
+what is the differenc between fileinput stream and file reader ?
+- while dealing with data we have to undrstand that whioch is the correct way of representing the data in program or system .
+- if we have image file , video ,large word or excel file ,we always prefer binary .
+
+WAP to accept customer details like 
+1. customer ID
+2.name 
+3.age 
+4. salary 
+after accepting data write this data to the file delimited by ','
+after writing please read customer name and customer age only and display it on VDU . 
+
+//start 
+import java.util.Scanner;
+import java
+
+public static void main(String[] args)
+{
+String name ;
+int age ;
+int salary;
+int ID;
+
+Scanner sc = new Scanner(System.in);
+System.out.Println("enter customer name , ID , age and salary respectively");
+name = sc.next();
+ID = sc.nextInt();
+age = sc.nextInt();
+salary = nextInt();
+
+//writing to file 
+FileOutputStream fo = new FileOutputStream("d:\\demo.txt");
+fo.write(name.getbytes()+',');
+fo.write(ID+',');
+fo.write(age+',');
+fo.write(salary+','+"\n");
+
+BufferedWriter bw = new BufferedWriter(fo);
+
+// reading  delimiting use ' , '
+FileInputStream fi = new FileInputStream("d:\\demo.txt");
+BufferReader br = new BufferReader(fi);
+
+
+}
+
+
+//sir code
+import java.io.*;
+import java.util.Scanner.*;
+public class ExerciseEx
+{
+public static void main(String[] args) throws Exception
+{
+FileWriter fw = new FileWriter("d:\\customer.txt");
+
+Scanner sc = new Scanner(system.in);
+System.out.println("");
+}
+}
+
